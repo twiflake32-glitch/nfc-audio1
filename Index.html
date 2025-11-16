@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Player</title>
+</head>
+<body style="text-align:center; padding-top:50px; background:#111; color:#fff; font-family:sans-serif;">
+  <h2>Tap the button to play audio 🎵</h2>
+  <button id="playBtn" style="font-size:20px; padding:15px 30px; margin-top:20px; cursor:pointer; border:none; border-radius:10px; background:#4CAF50; color:white;">
+    Play Audio
+  </button>
+
+  <audio id="audio" src="text.mp3"></audio>
+
+  <script>
+    const btn = document.getElementById('playBtn');
+    const audio = document.getElementById('audio');
+    btn.addEventListener('click', () => {
+      audio.play();
+      btn.style.display = 'none'; // hide button after playing
+    });
+  </script>
+</body>
+</html>
